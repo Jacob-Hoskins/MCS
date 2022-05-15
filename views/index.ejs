@@ -3,5 +3,48 @@
 <%- include('./partials/head.ejs') %>
 <body>
     <h1>Home</h1>
+    <div class="login-div" id="login-div">
+        <h1>Login</h1>
+        <form action="" class="login-form">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+
+            <button>Log in</button>
+        </form>
+    </div>
+    
+    <div class="create-account-btn" id="create-btn">
+        <button onclick="createPopUp()" id="createBtn">Create Account</button>
+    </div>
+    
+
+    <div class="create-div" id="create-div">
+        <form action="/new-profile" method="POST" class="create-form">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="emailConfirm">Confirm Email</label>
+            <input type="email" name="emailConfirm" id="emailconfirm" required>
+            
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+
+            <label for="passConfirm">Confirm Password</label>
+            <input type="password" name="passConfirm" id="passConfirm">
+            
+            <button>Create</button>
+        </form>
+    </div>
+
+    <script src="/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+.login-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.create-account-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+.create-div{
+    display: none;
+    text-align: center;
+    margin: auto
+}
+
+.create-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
