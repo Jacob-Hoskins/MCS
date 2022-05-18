@@ -1,50 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs') %>
-<body>
-    <h1>Home</h1>
-    <div class="login-div" id="login-div">
-        <h1>Login</h1>
-        <form action="" class="login-form">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+    <body>
+        <!-- <h1>Home</h1>
+        <div class="login-div" id="login-div">
+            <h1>Login</h1>
+            <form action="" class="login-form">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
 
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
 
-            <button>Log in</button>
-        </form>
-    </div>
-    
-    <div class="create-account-btn" id="create-btn">
-        <button onclick="createPopUp()" id="createBtn">Create Account</button>
-    </div>
-    
+                <button>Log in</button>
+            </form>
+        </div>
+        
+        <div class="create-account-btn" id="create-btn">
+            <button onclick="createPopUp()" id="createBtn">Create Account</button>
+        </div>
+        
 
-    <div class="create-div" id="create-div">
-        <form action="/new-profile" method="POST" class="create-form">
-            <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" required>
+        <div class="create-div" id="create-div">
+            <form action="/new-profile" method="POST" class="create-form">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" required>
 
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName">
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
 
-            <label for="emailConfirm">Confirm Email</label>
-            <input type="email" name="emailConfirm" id="emailconfirm" required>
-            
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+                <label for="emailConfirm">Confirm Email</label>
+                <input type="email" name="emailConfirm" id="emailconfirm" required>
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
 
-            <label for="passConfirm">Confirm Password</label>
-            <input type="password" name="passConfirm" id="passConfirm">
-            
-            <button>Create</button>
-        </form>
-    </div>
+                <label for="passConfirm">Confirm Password</label>
+                <input type="password" name="passConfirm" id="passConfirm">
+                
+                <button>Create</button>
+            </form>
+        </div> -->
+        <nav>
+            <div class="left-nav">
+                <div>
+                    <p>MC Schedule</p>
+                </div>
+            </div>
+            <div class="right-nav">
+                <div>
+                    <p><a href="/login">Login</a></p>
+                </div>
+                <div>
+                    <p><a href="/create-account">Sign up</a></p>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <aside class="grabber-1">
+                <div class="grabber-1-left">
+                    <img class="grabber-1-img" src="https://st.depositphotos.com/1026266/4629/i/600/depositphotos_46293115-stock-photo-tablet-pc-showing-calendar-on.jpg" alt="schedule image">
+                </div>
+                <div class="grabber-1-right">
+                    <p class="main-font">Running a construction company is hard enough without having to put so many hours into the schedule, let MC Scheduler help you lighten the load!
+                    </p>
+                </div>
+            </aside>
 
-    <script src="/script.js"></script>
-</body>
+            <aside class="grabber-2">
+                <div class="grabber-2-header">
+                    <p class="main-font">Why use My Construction Schedule</p>
+                </div>
+
+                <div class="grabber-2-text">
+                    <div class="grabber-2-left grabber-border main-font">
+                        <p>See current and  upcoming jobs</p>
+                        <p>See how many jobs you have going on at once</p>
+                        <p>All your job details are in one place</p>
+                    </div>
+                    <div class="grabber-border main-font">
+                        <p>Automatically send the client the Job specs for them to confirm</p>
+                        <p>While most clients wont take advatage of you, a digital confirmation is a good way to cover yourself</p>
+                    </div>
+                    <div  class="grabber-border main-font">
+                        <p>Track the total hours on a job so you can bill the client and not have to worry about losing a piece of paper</p>
+                        <p>Keep track of your employees time on the job</p>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="grabber-3" >
+                <div class="grabber-3A">
+                    <img src="https://media.istockphoto.com/photos/huge-mistake-picture-id182814320?k=20&m=182814320&s=612x612&w=0&h=ul9FvlGdk6DzXGB-whi7Bq6YGJSCe4pIOclveY1IrTo=" alt="Upset construction worker">
+                    <p class="main-font">We`ve all hear the horror stories of clients trying to pull a fast one to not pay their contractor. With email confirmation they won`t be able to say the job was supposed to start earlier than said, and it makes them confirm the job specs so they can`t add stuff after the fact.</p>
+                </div>
+                <div class="grabber-3A">
+                    <p class="main-font">You won`t have blueprints for every job, and you can`t be on every job at once. MC Schedule lets your employees see the scope of the job so that they`re always doing something and dont have to call you every 5 minutes to figure out what to do next.</p>
+                    <img src="https://st4.depositphotos.com/12985790/i/600/depositphotos_203570610-stock-photo-female-engineer-male-worker-blueprints.jpg" alt="construction worker looking at blueprints">
+                </div>
+                <div class="grabber-3A">
+                    <img src="https://media.istockphoto.com/photos/calender-planner-organization-management-remind-concept-picture-id505887420?k=20&m=505887420&s=612x612&w=0&h=jfmmDddnzeXgmXnngML35Zbc9fAWRQfKbhAmj9Ooxrg=" alt="Person scheduling">
+                    <p class="main-font">MC Schedule software allows shows you how many jobs you have going on at once, and still keeps the job details seperate and easy to understand. You`re even able to compare jobs that are happening at the same time to help prioratize and figure out what needs done where.</p>
+                </div>
+                <div class="grabber-3A">
+                    <p class="main-font">When it`s time to worry about the hours you have on the job MC Schedule can take care of that too. Your employees have a virtual time clock so you`ll be able to just click on the job and see the total number of hours you have in it so far. You`ll also be able to see your employee`s weekly hours.</p>
+                    <img src="https://media.istockphoto.com/photos/clocking-system-picture-id484107197?k=20&m=484107197&s=612x612&w=0&h=Jmb99oJDGSDJKRxQKZM_MF3aDTvjeh6HmFUkZusuACc=" alt="timeclock">
+                </div>
+            </aside>
+        </main>
+        <script src="/script.js"></script>
+    </body>
 </html>

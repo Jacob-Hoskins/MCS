@@ -32,7 +32,7 @@ app.post('/new-profile', (req, res) =>{
 
     //TODO: check for email if its already created
     //TODO: after login take back to home page to login
-    
+
 
     pool.query('INSERT INTO users SET first_name=?, last_name=?, email=?, password=?',
     [req.body.firstName, req.body.lastName, req.body.email,req.body.password], (err, res) =>{
@@ -45,5 +45,12 @@ app.post('/new-profile', (req, res) =>{
     res.redirect('/')
 
     createUser(req.body)
+})
 
+app.get('/login', (req, res)=>{
+    res.render('login')
+})
+
+app.get('/create-account', (req, res)=>{
+    res.render('createAccount')
 })
