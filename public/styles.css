@@ -11,6 +11,15 @@ nav{
     padding: 25px;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
 .main-font{
     font-size: 28px;
 }
@@ -80,4 +89,82 @@ nav{
     align-items: center;
     gap: 25px;
     margin: 25px;
+}
+
+/* Login section */
+
+.login-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20vh;
+    background-color: #4C956C;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 35px;
+    border-radius: 45px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 25px;
+
+}
+
+.login-form > button{
+    border-radius: 25px;
+    width: 9vw;
+    height: 4vh;
+    margin: auto;
+    margin-top: 5px;
+    background-color: #FF6C47;
+
+}
+
+
+.form-input{
+    margin: 10px;
+}
+
+
+/* Sign up page */
+
+.create-account-header{
+    font-size: 30px;
+    text-align: center;
+}
+
+.create-div{
+    display: flex;
+    margin: auto;
+    margin-top: 25vh;
+    text-align: center;
+    background-color: #4C956C;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 35px;
+    border-radius: 45px;
+}
+
+.create-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+.create-form > input{
+    margin: 10px;
+    
+}
+
+.create-form > button{
+    border-radius: 25px;
+    width: 9vw;
+    height: 4vh;
+    margin: auto;
+    margin-top: 5px;
+    background-color: #FF6C47;
 }

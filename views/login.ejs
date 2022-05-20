@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <nav>
+        <div>
+            <div>
+                <p><a href="/">MC Schedule</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-div" id="login-div">
+        <h1>Login</h1>
+        <form action="" class="login-form">
+            <label class="main-font " for="email">Email</label>
+            <input class="form-input" type="email" name="email" id="email" required>
+
+            <label class="main-font" for="password">Password</label>
+            <input class="form-input" type="password" name="password" id="password" required>
+
+            <p>Don`t have an account?</p>
+            <p class="login-redirect"><a href="/create-account">Create an account!</a></p>
+
+            <button>Log in</button>
+        </form>
+    </div>
+</body>
+</html>

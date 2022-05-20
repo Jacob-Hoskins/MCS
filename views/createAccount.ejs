@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <nav>
+        <div>
+            <div>
+                <p><a href="/">MC Schedule</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <header class="create-account-header">
+        <p>Create your MC Schedule account today!</p>
+    </header>
+
+    <div class="create-div" id="create-div">
+        <form class="create-form" action="/create-account" method="POST" class="create-form">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="emailConfirm">Confirm Email</label>
+            <input type="email" name="emailConfirm" id="emailconfirm" required>
+            
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+
+            <label for="passConfirm">Confirm Password</label>
+            <input type="password" name="passConfirm" id="passConfirm">
+            
+            <button>Create</button>
+        </form>
+    </div>
+</body>
+</html>

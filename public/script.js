@@ -1,11 +1,12 @@
 console.log('hello mcs')
 
-function createPopUp(){
-    popup = document.getElementById('create-div')
-    loginArea = document.getElementById('login-div')
-    createBtn = document.getElementById('create-btn')
+module.exports = function matchingInputs(emailOne, emailTwo){
+    if(emailOne === emailTwo){
+        console.log(emailOne, emailTwo)
+        return true
+    }
+    else{
+        false
+    }
+};
 
-    loginArea.style.display = 'none'
-    createBtn.style.display = 'none'
-    popup.style.display = 'flex'
-}

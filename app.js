@@ -1,7 +1,7 @@
 const express = require('express');
-const mysql = require('mysql')
-
+const mysql = require('mysql');
 const app = express();
+const verifyInputs = require('./public/script')
 
 const pool = mysql.createPool({
     host: 'localhost',
@@ -27,25 +27,6 @@ app.get('/new-profile', (req, res) =>{
     res.redirect('/')
 })
 
-app.post('/new-profile', (req, res) =>{
-    console.log(req.body.firstName)
-
-    //TODO: check for email if its already created
-    //TODO: after login take back to home page to login
-
-
-    pool.query('INSERT INTO users SET first_name=?, last_name=?, email=?, password=?',
-    [req.body.firstName, req.body.lastName, req.body.email,req.body.password], (err, res) =>{
-        if(err){
-            console.log(err)
-        }
-        console.log(res)
-    })
-
-    res.redirect('/')
-
-    createUser(req.body)
-})
 
 app.get('/login', (req, res)=>{
     res.render('login')
@@ -53,4 +34,37 @@ app.get('/login', (req, res)=>{
 
 app.get('/create-account', (req, res)=>{
     res.render('createAccount')
+})
+
+app.post('/create-account', (req, res) =>{
+    console.log(req.body.firstName)
+
+    //TODO: check for email if its already created
+    //TODO: after login take back to home page to login
+
+    //db commands
+    // pool.query('INSERT INTO users SET first_name=?, last_name=?, email=?, password=?',
+    // [req.body.firstName, req.body.lastName, req.body.email,req.body.password], (err, res) =>{
+    //     if(err){
+    //         console.log(err)
+    //     }
+    //     console.log(res)
+    //     console.log('Account Created')
+    // })
+    
+    if(verifyInputs(req.body.email, req.body.emailConfirm)){
+        console.log('true output')
+        if(verifyInputs(req.body.password, req.body.passConfirm)){
+            console.log('Passwords match too')
+        }else{
+            console.log("passwords dont match")
+        }
+    }
+    else{
+        //TODO: create design for falsly matching emails
+        console.log('false')
+    }
+
+    res.redirect('/')
+
 })
