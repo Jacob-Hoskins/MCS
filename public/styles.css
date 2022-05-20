@@ -21,7 +21,7 @@ a:visited{
 }
 
 .main-font{
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .right-nav{
@@ -29,6 +29,25 @@ a:visited{
     gap: 15px;
     margin-right: 5px;
 }
+
+/* Home page */
+
+.home-registration-header{
+    background-color:aquamarine;
+    padding: 20vh;
+}
+
+.registration-header-flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.register-link{
+    text-align: center;
+    margin-top: 15vh;
+}
+
 
 .grabber-1{
     display: flex;
@@ -123,11 +142,9 @@ a:visited{
 
 }
 
-
 .form-input{
     margin: 10px;
 }
-
 
 /* Sign up page */
 
@@ -152,12 +169,10 @@ a:visited{
     display: flex;
     flex-direction: column;
     margin: auto;
-    
 }
 
 .create-form > input{
     margin: 10px;
-    
 }
 
 .create-form > button{
@@ -167,4 +182,39 @@ a:visited{
     margin: auto;
     margin-top: 5px;
     background-color: #FF6C47;
+}
+
+/* business setup page */
+.business-setup-main{
+    background-color: #4C956C;
+    border-radius: 25px;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    height: 55vh;
+}
+
+.business-setup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.business-setup-form > input{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.add-business-btn{
+    margin-top: 15vh;
+    background-color: #FF6C47;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 20px;
 }

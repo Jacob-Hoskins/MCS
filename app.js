@@ -1,7 +1,8 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const verifyInputs = require('./public/script')
+// const verifyInputs = require('./public/script')
+const inputVal = require('./public/script')
 
 const pool = mysql.createPool({
     host: 'localhost',
@@ -52,9 +53,9 @@ app.post('/create-account', (req, res) =>{
     //     console.log('Account Created')
     // })
     
-    if(verifyInputs(req.body.email, req.body.emailConfirm)){
+    if(inputVal.verifyInputs(req.body.email, req.body.emailConfirm)){
         console.log('true output')
-        if(verifyInputs(req.body.password, req.body.passConfirm)){
+        if(inputVal.verifyInputs(req.body.password, req.body.passConfirm)){
             console.log('Passwords match too')
         }else{
             console.log("passwords dont match")
@@ -67,4 +68,12 @@ app.post('/create-account', (req, res) =>{
 
     res.redirect('/')
 
+})
+
+app.get('/business-name', (req,res) =>{
+    res.render('AddBusiness')
+})
+
+app.get('/main-component', (req,res) =>{
+    res.render('calanderView')
 })
