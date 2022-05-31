@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #035E7B;
+    color: #F4F6F6;
+    padding: 25px;
+}
+
+a:visited{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* calendar */
+
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 770px;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#weekdays{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#calendar{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.day{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    padding: 2px;
+    background-color: rgb(223, 222, 222);
+}
+
+.day:hover{
+    width: 110px;
+    height: 110px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(173, 171, 171);
+}

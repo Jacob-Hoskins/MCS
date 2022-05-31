@@ -218,3 +218,20 @@ a:visited{
     padding: 10px;
     font-size: 20px;
 }
+
+/* calender */
+
+.calender-table{
+    background-color: grey;
+    width: 75vw;
+    height: 75vh;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+td{
+    border: solid black 2px;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
+}
